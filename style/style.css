@@ -1,0 +1,391 @@
+body {
+  background-color: #050505;
+}
+.text-white {
+  color: #fff !important;
+}
+.text-bisque {
+  color: #efe6d5;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.hero {
+  background-image: radial-gradient(at center center, #05050500 0%, #050505 60%),
+    url("../img/hero3.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+.hero .hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Fahkwang", sans-serif;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: #fff;
+  word-break: break-all;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-content {
+    align-items: flex-end;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+    word-break: break-all;
+    max-width: 60%;
+  }
+}
+/* =========================================end hero============================== */
+/* =========================================start about============================== */
+.about {
+  background-color: #050505;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about .about-content .row {
+  justify-content: space-between;
+}
+.about .about-img {
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+}
+.about .about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about-img .inner {
+  background-color: #101010;
+  padding-bottom: 200px;
+}
+
+.about .about-img img {
+  border-radius: 5px;
+}
+.about .about-img p {
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0.7;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about .about-img p:hover {
+  opacity: 1;
+}
+.about .about-img p::after {
+  content: "\f08e";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  margin-left: 10px;
+}
+.about .img-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .img-top .inner {
+  padding-bottom: 130px !important;
+}
+.about .img-top .inner {
+  margin-top: 70px;
+}
+
+@media (min-width: 1024px) {
+  .about .about-img .inner {
+    background-color: #101010;
+  }
+}
+
+/* =========================================end about============================== */
+/* =========================================start portfolio============================== */
+.portfolio {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 50%
+    ),
+    url(../img/about.jpg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 150px 0;
+}
+.bg-img {
+}
+.portfolio .portfolio-content {
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.portfolio .portfolio-content .media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.portfolio .portfolio-content .media i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  background-color: #fff;
+  color: #050505;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-content .media i:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.portfolio .portfolio-content p {
+  color: #aca99e;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+.portfolio-content a {
+  display: block;
+  margin-top: 25px;
+  color: #efe6d5;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1024px) {
+  .portfolio .portfolio-content .media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .portfolio .portfolio-content {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* =========================================end portfolio============================== */
+/* =========================================start gallery============================== */
+.gallery {
+  padding-top: 100px;
+}
+.gallery .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.gallery .header h3 {
+  font-size: 32px;
+}
+.gallery .header a {
+  color: #efe6d5;
+  font-size: 22px;
+}
+.gallery .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.gallery .inner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #050505;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.gallery .inner:hover::after {
+  opacity: 0.6;
+}
+
+/* =========================================end gallery============================== */
+/* =========================================start services============================== */
+.services .row {
+  justify-content: space-between;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.services .row .inner {
+  padding: 10px;
+}
+.services .row .inner h3 {
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.services .row .inner p {
+  color: #aca99e;
+  line-height: 1.7;
+}
+.services .row .inner a {
+  display: block;
+  margin-top: 20px;
+  color: #aca99e;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .services .row {
+    flex-wrap: nowrap;
+  }
+}
+/* =========================================end services============================== */
+/* =========================================start artcial============================== */
+
+.artcial {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.artcial .content {
+  display: flex;
+  flex-direction: column;
+}
+.artcial .content .quotes {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.artcial .content .quotes i {
+  font-size: 40px;
+}
+.artcial .content .img-content {
+  padding-top: 25px;
+}
+.artcial .content .img-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.artcial .content .card-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+.artcial .content .img-content .card-img img {
+  width: 60px;
+  height: 60px;
+}
+.artcial .content .img-content .card-img h3 {
+  font-size: 14px;
+}
+.artcial .content .img-content .card-img p {
+  color: #aca99e;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .artcial .content .quotes {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .artcial .content .card-img {
+    flex-direction: row;
+    text-align: left;
+  }
+  .artcial .content .img-content p {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+/* =========================================end artcial============================== */
+
+/* =========================================start work============================== */
+.work {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #050505 51%, #0505059e 100%),
+    url(../img/cta.png);
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-position: center;
+  background-size: cover;
+}
+.work .work-content {
+  text-align: center;
+  color: #fff;
+}
+.work .work-content h3 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.work .work-content a {
+  color: rgb(239, 230, 213);
+
+  font-size: 18px;
+  display: block;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+/* =========================================end work============================== */
+/* =========================================start footer============================== */
+.footer {
+  padding: 70px 0;
+  text-align: center;
+}
+.footer .row {
+  gap: 30px;
+}
+.footer .inner img {
+  margin: auto;
+  width: 200px;
+}
+.footer .inner .nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.footer .inner .nav-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer .inner .nav-list li a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.footer p {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer .inner .nav-list {
+    margin:0;
+  }
+}
+
+/* =========================================end footer============================== */
