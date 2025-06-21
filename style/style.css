@@ -67,8 +67,8 @@ img {
   align-items: center;
 }
 .about .about-img .inner {
-  background-color: #101010;
-  padding-bottom: 200px;
+  /* background-color: #101010; */
+  padding-bottom: 0;
 }
 
 .about .about-img img {
@@ -102,12 +102,19 @@ img {
   padding-bottom: 130px !important;
 }
 .about .img-top .inner {
-  margin-top: 70px;
+  margin-top: 0;
 }
 
 @media (min-width: 1024px) {
   .about .about-img .inner {
     background-color: #101010;
+  }
+  .about .img-top .inner {
+    margin-top: 70px;
+  }
+  .about .about-img .inner {
+    /* background-color: #101010; */
+    padding-bottom: 200px;
   }
 }
 
@@ -125,16 +132,13 @@ img {
   background-repeat: no-repeat;
   padding: 150px 0;
 }
-.bg-img {
-}
+
 .portfolio .portfolio-content {
   padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 .portfolio .portfolio-content .media {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 25px;
 }
@@ -169,6 +173,13 @@ img {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+@media (min-width: 768px) {
+  .portfolio .portfolio-content {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 
 @media (min-width: 1024px) {
   .portfolio .portfolio-content .media {
@@ -192,7 +203,7 @@ img {
 }
 .gallery .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #fff;
   margin-bottom: 30px;
@@ -203,6 +214,7 @@ img {
 .gallery .header a {
   color: #efe6d5;
   font-size: 22px;
+  display: none;
 }
 .gallery .inner {
   display: flex;
@@ -225,7 +237,14 @@ img {
 .gallery .inner:hover::after {
   opacity: 0.6;
 }
-
+@media (min-width: 768px) {
+  .gallery .header {
+    justify-content: space-between;
+  }
+  .gallery .header a {
+    display: block;
+  }
+}
 /* =========================================end gallery============================== */
 /* =========================================start services============================== */
 .services .row {
@@ -378,13 +397,17 @@ img {
   color: #fff;
   text-transform: capitalize;
   text-decoration: none;
+  transition: 0.3s;
+}
+.footer .inner .nav-list li a:hover {
+  color: #aca99e;
 }
 .footer p {
   text-align: center;
 }
 @media (min-width: 768px) {
   .footer .inner .nav-list {
-    margin:0;
+    margin: 0;
   }
 }
 
