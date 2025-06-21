@@ -11,6 +11,116 @@ img {
   display: block;
   max-width: 100%;
 }
+.border-b-none {
+  border-bottom: none !important;
+}
+/* ========================start nav======== */
+.nav .inner-nav {
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav .inner-nav .nav-logo {
+  width: 170px;
+}
+.nav .inner-nav .nav-list {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border-radius: 2px;
+  
+
+}
+
+#toggle-menu:checked ~ .nav-list {
+  display: flex;
+}
+.icon-close {
+  display: none;
+}
+
+#toggle-menu:checked + .toggle .icon-open {
+  display: none;
+}
+#toggle-menu:checked + .toggle .icon-close {
+  display: inline-block;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+.toggle a {
+  text-decoration: none;
+}
+#toggle-menu {
+  display: none;
+}
+
+.nav .inner-nav .nav-list li {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 10px 0;
+  border-bottom: 1px #aca99e44 solid;
+}
+
+.nav .inner-nav .nav-list a {
+  color: #aca99e;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav .inner-nav .nav-list a:hover {
+  color: #050505;
+}
+
+@media (min-width: 1024px) {
+  .nav .inner-nav {
+    flex-direction: column;
+  }
+  .nav .inner-nav .nav-list {
+    flex-direction: row;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+  .nav .inner-nav .nav-list li {
+    border-bottom: none;
+  }
+  .nav .inner-nav .nav-list li a {
+    color: #fff;
+  }
+   .nav .inner-nav .nav-list li a:hover {
+    color: #aca99e;
+  }
+  .toggle {
+    display: none;
+  }
+}
+/* ========================end nav======== */
+
+/* start hero */
 .hero {
   background-image: radial-gradient(at center center, #05050500 0%, #050505 60%),
     url("../img/hero3.png");
@@ -37,9 +147,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .hero .hero-content {
-    align-items: flex-end;
-  }
   .hero-content h1 {
     font-size: 40px;
     word-break: break-all;
