@@ -1,5 +1,14 @@
 body {
   background-color: #050505;
+  font-family: "Manrope", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fahkwang", sans-serif;
 }
 .text-white {
   color: #fff !important;
@@ -36,9 +45,7 @@ img {
   position: absolute;
   left: 0;
   top: 100%;
-  border-radius: 2px;
-  
-
+  border-radius: 5px;
 }
 
 #toggle-menu:checked ~ .nav-list {
@@ -75,22 +82,25 @@ img {
 
 .nav .inner-nav .nav-list li {
   display: inline-block;
-  margin-right: 40px;
-  padding: 10px 0;
+  /* margin-right: 40px; */
+  border-radius: 5px;
   border-bottom: 1px #aca99e44 solid;
 }
-
+.nav .inner-nav .nav-list li:hover {
+  background-color: #050505;
+}
+.nav .inner-nav .nav-list li:hover a {
+  color: #fff;
+}
 .nav .inner-nav .nav-list a {
   color: #aca99e;
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 15px;
   transition: 0.3s;
   position: relative;
-}
-
-.nav .inner-nav .nav-list a:hover {
-  color: #050505;
+  padding: 10px 10px;
 }
 
 @media (min-width: 1024px) {
@@ -99,7 +109,7 @@ img {
   }
   .nav .inner-nav .nav-list {
     flex-direction: row;
-    margin-top: 35px;
+    margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,17 +117,40 @@ img {
   }
   .nav .inner-nav .nav-list li {
     border-bottom: none;
+    margin-right: 25px;
   }
   .nav .inner-nav .nav-list li a {
     color: #fff;
+    position: relative;
+    padding: 0;
   }
-   .nav .inner-nav .nav-list li a:hover {
+  .nav .inner-nav .nav-list li a::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    transition: .3s width;
+  }
+  .nav .inner-nav .nav-list li a:hover::after {
+    width: 100%;
+  }
+  .nav .inner-nav .nav-list li:hover {
+    background-color: transparent;
+  }
+  .nav .inner-nav .nav-list li:hover a {
+    color: #fff;
+  }
+  .nav .inner-nav .nav-list li a:hover {
     color: #aca99e;
   }
   .toggle {
     display: none;
   }
 }
+
 /* ========================end nav======== */
 
 /* start hero */
@@ -128,6 +161,7 @@ img {
   background-size: cover;
   background-position: center;
   background-color: transparent;
+  background-repeat: no-repeat;
 }
 .hero .hero-content {
   display: flex;
@@ -136,8 +170,10 @@ img {
   height: 100vh;
 }
 .hero-content h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
+  margin-top: 100px;
+  padding-inline: 20px;
   font-family: "Fahkwang", sans-serif;
   line-height: 1.4em;
   text-transform: uppercase;
@@ -478,6 +514,9 @@ img {
   margin-top: 25px;
   text-transform: uppercase;
 }
+
+
+
 /* =========================================end work============================== */
 /* =========================================start footer============================== */
 .footer {
